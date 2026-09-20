@@ -41,10 +41,10 @@ echo "开始 DIY1 配置……"
 echo "========================="
 
 ##原版op添加ac3支持
-
+mergeg_packae 25.12.5 https://github.com/BeeconMini/openwrt package/kernel package/kernel/rtl8373n
 
 ## autocore automount default-settings
-merge_package master https://github.com/immortalwrt/immortalwrt package/emortal package/emortal/default-settings
+mergeg_packae master https://github.com/immortalwrt/immortalwrt package/emortal package/emortal/default-settings
 
 echo "========================="
 echo " DIY1 配置完成……"

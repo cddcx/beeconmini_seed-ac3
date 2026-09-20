@@ -41,7 +41,14 @@ echo "开始 DIY1 配置……"
 echo "========================="
 
 ##原版op添加ac3支持
+rm -rf target/linux/mediatek/filogic/base-files/etc/board.d/02_network
+rm -rf target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh
+rm -rf target/linux/mediatek/image/filogic.mk
 mergeg_packae 25.12.5 https://github.com/BeeconMini/openwrt package/kernel package/kernel/rtl8373n
+mergeg_packae 25.12.5 https://github.com/BeeconMini/openwrt target/linux/mediatek/dts target/linux/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts
+mergeg_packae 25.12.5 https://github.com/BeeconMini/openwrt target/linux/mediatek/filogic/base-files/etc/board.d target/linux/mediatek/filogic/base-files/etc/board.d/02_network
+mergeg_packae 25.12.5 https://github.com/BeeconMini/openwrt target/linux/mediatek/filogic/base-files/lib/upgrade target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh
+mergeg_packae 25.12.5 https://github.com/BeeconMini/openwrt target/linux/mediatek/image target/linux/mediatek/image/filogic.mk
 
 ## autocore automount default-settings
 mergeg_packae master https://github.com/immortalwrt/immortalwrt package/emortal package/emortal/default-settings

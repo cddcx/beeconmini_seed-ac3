@@ -395,6 +395,12 @@ platform_do_upgrade() {
 			CI_KERNPART="fit"
 			nand_do_upgrade "$1"
 			;;
+	beeconmini,seed-ac1)
+		CI_KERNPART="kernel"
+		CI_ROOTPART="rootfs"
+		CI_DATAPART="rootfs_data"
+		emmc_do_upgrade "$1"
+		;;
 		esac
 		;;
 	*)

@@ -40,6 +40,9 @@ merge_feed(){
 echo "开始 DIY1 配置……"
 echo "========================="
 
+##原版op添加ac3支持
+
+
 ## autocore automount default-settings
 merge_package master https://github.com/immortalwrt/immortalwrt package/emortal package/emortal/default-settings
 

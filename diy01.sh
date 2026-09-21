@@ -42,6 +42,7 @@ echo "========================="
 
 ##原版op添加ac3支持
 rm -rf target/linux/mediatek/filogic/base-files/etc/board.d/02_network
+cp -f ${GITHUB_WORKSPACE}/02_network target/linux/mediatek/filogic/base-files/etc/board.d/02_network
 rm -rf target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh
 rm -rf target/linux/mediatek/image/filogic.mk
 mergeg_packae 25.12.5 https://github.com/BeeconMini/openwrt package/kernel package/kernel/rtl8373n-ac3

@@ -44,7 +44,7 @@ echo "========================="
 rm -rf target/linux/mediatek/filogic/base-files/etc/board.d/02_network
 rm -rf target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh
 rm -rf target/linux/mediatek/image/filogic.mk
-mergeg_packae 25.12.5 https://github.com/BeeconMini/openwrt package/kernel package/kernel/rtl8373n
+mergeg_packae 25.12.5 https://github.com/BeeconMini/openwrt package/kernel package/kernel/rtl8373n-ac3
 mergeg_packae 25.12.5 https://github.com/BeeconMini/openwrt target/linux/mediatek/dts target/linux/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts
 mergeg_packae 25.12.5 https://github.com/BeeconMini/openwrt target/linux/mediatek/filogic/base-files/etc/board.d target/linux/mediatek/filogic/base-files/etc/board.d/02_network
 mergeg_packae 25.12.5 https://github.com/BeeconMini/openwrt target/linux/mediatek/filogic/base-files/lib/upgrade target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh

@@ -41,8 +41,10 @@ echo "开始 DIY1 配置……"
 echo "========================="
 
 ##原版op添加ac3支持
-merge_packae 25.12.5 https://github.com/BeeconMini/openwrt package/kernel package/kernel/rtl8373n-ac3
-merge_packae 25.12.5 https://github.com/BeeconMini/openwrt target/linux/mediatek/dts target/linux/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts
+#merge_packae 25.12.5 https://github.com/BeeconMini/openwrt package/kernel package/kernel/rtl8373n-ac3
+#merge_packae 25.12.5 https://github.com/BeeconMini/openwrt target/linux/mediatek/dts target/linux/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts
+cp -f ${GITHUB_WORKSPACE}/patch/Makefile package/kernel/rtl8373n-ac3/Makefile
+cp -f ${GITHUB_WORKSPACE}/patch/mt7986a-beeconmini-seed-ac3.dts target/linux/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts
 rm -rf target/linux/mediatek/filogic/base-files/etc/board.d/02_network
 cp -f ${GITHUB_WORKSPACE}/patch/02_network target/linux/mediatek/filogic/base-files/etc/board.d/02_network
 rm -rf target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh

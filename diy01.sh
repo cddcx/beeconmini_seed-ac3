@@ -46,14 +46,14 @@ merge_package 25.12.5 https://github.com/BeeconMini/openwrt target/linux/mediate
 #cp -f ${GITHUB_WORKSPACE}/patch/Makefile package/kernel/rtl8373n-ac3/Makefile
 #cp -f ${GITHUB_WORKSPACE}/patch/mt7986a-beeconmini-seed-ac3.dts target/linux/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts
 rm -rf target/linux/mediatek/filogic/base-files/etc/board.d/02_network
-cp -f ${GITHUB_WORKSPACE}/patch/02_network target/linux/mediatek/filogic/base-files/etc/board.d/02_network
+#cp -f ${GITHUB_WORKSPACE}/patch/02_network target/linux/mediatek/filogic/base-files/etc/board.d/02_network
 rm -rf target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh
-cp -f ${GITHUB_WORKSPACE}/patch/platform.sh target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh
+#cp -f ${GITHUB_WORKSPACE}/patch/platform.sh target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh
 rm -rf target/linux/mediatek/image/filogic.mk
-cp -f ${GITHUB_WORKSPACE}/patch/filogic.mk target/linux/mediatek/image/filogic.mk
-#merge_package 25.12.5 https://github.com/BeeconMini/openwrt target/linux/mediatek/filogic/base-files/etc/board.d target/linux/mediatek/filogic/base-files/etc/board.d/02_network
-#merge_package 25.12.5 https://github.com/BeeconMini/openwrt target/linux/mediatek/filogic/base-files/lib/upgrade target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh
-#merge_package 25.12.5 https://github.com/BeeconMini/openwrt target/linux/mediatek/image target/linux/mediatek/image/filogic.mk
+#cp -f ${GITHUB_WORKSPACE}/patch/filogic.mk target/linux/mediatek/image/filogic.mk
+merge_package 25.12.5 https://github.com/BeeconMini/openwrt target/linux/mediatek/filogic/base-files/etc/board.d target/linux/mediatek/filogic/base-files/etc/board.d/02_network
+merge_package 25.12.5 https://github.com/BeeconMini/openwrt target/linux/mediatek/filogic/base-files/lib/upgrade target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh
+merge_package 25.12.5 https://github.com/BeeconMini/openwrt target/linux/mediatek/image target/linux/mediatek/image/filogic.mk
 
 ## autocore automount default-settings
 merge_package master https://github.com/immortalwrt/immortalwrt package/emortal package/emortal/default-settings

@@ -49,10 +49,11 @@ rm -rf target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh
 #cp -f ${GITHUB_WORKSPACE}/patch/platform.sh target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh
 rm -rf target/linux/mediatek/image/filogic.mk
 #cp -f ${GITHUB_WORKSPACE}/patch/filogic.mk target/linux/mediatek/image/filogic.mk
-curl -s https://github.com/BeeconMini/openwrt/tree/25.12.5/target/linux/mediatek/filogic/base-files/etc/board.d/02_network  > target/linux/mediatek/filogic/base-files/etc/board.d/02_network
-curl -s https://github.com/BeeconMini/openwrt/tree/25.12.5/target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh  > target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh
-curl -s https://github.com/BeeconMini/openwrt/tree/25.12.5/target/linux/mediatek/image  > target/linux/mediatek/image/filogic.mk
-curl -s https://github.com/BeeconMini/openwrt/tree/25.12.5/target/linux/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts  > target/linux/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts
+merge_package 25.12.5 https://github.com/BeeconMini/openwrt package/ac3 target/linux/mediatek
+cp -f package/ac3/mediatek/filogic/base-files/etc/board.d/02_network target/linux/mediatek/filogic/base-files/etc/board.d/02_network
+cp -f package/ac3/mediatek/filogic/base-files/lib/upgrade/platform.sh target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh
+cp -f package/ac3/mediatek/image/filogic.mk target/linux/mediatek/image/filogic.mk
+cp -f package/ac3/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts target/linux/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts
 merge_package 25.12.5 https://github.com/BeeconMini/openwrt package/kernel package/kernel/rtl8373n-ac3
 
 ## autocore automount default-settings

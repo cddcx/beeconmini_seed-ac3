@@ -55,6 +55,7 @@ cp -f package/ac3/mediatek/filogic/base-files/lib/upgrade/platform.sh target/lin
 cp -f package/ac3/mediatek/image/filogic.mk target/linux/mediatek/image/filogic.mk
 cp -f package/ac3/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts target/linux/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts
 merge_package 25.12.5 https://github.com/BeeconMini/openwrt package/kernel package/kernel/rtl8373n-ac3
+rm -rf package/ac3
 
 ## autocore automount default-settings
 merge_package master https://github.com/immortalwrt/immortalwrt package/emortal package/emortal/default-settings

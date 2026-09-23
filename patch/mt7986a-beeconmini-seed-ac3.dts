@@ -38,9 +38,7 @@
 
 		led_sys: led_sys {
 			label = "led_sys";
-			gpios = <&pio 13 GPIO_ACTIVE_LOW>;
-            default-state = "on";           // 开机默认点亮
-            linux,default-trigger = "heartbeat";  // 心跳闪烁
+			gpios = <&pio 13 GPIO_ACTIVE_HIGH>;
 		};
 	};
 

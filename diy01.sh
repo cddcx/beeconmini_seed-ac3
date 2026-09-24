@@ -43,8 +43,6 @@ echo "========================="
 ##原版op添加ac3支持
 #cp -f ${GITHUB_WORKSPACE}/patch/Makefile package/kernel/rtl8373n-ac3/Makefile
 #cp -f ${GITHUB_WORKSPACE}/patch/mt7986a-beeconmini-seed-ac3.dts target/linux/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts
-rm -rf target/linux/mediatek/filogic/base-files/etc/board.d/01_leds
-cp -f ${GITHUB_WORKSPACE}/patch/01_leds target/linux/mediatek/filogic/base-files/etc/board.d/01_leds
 rm -rf target/linux/mediatek/filogic/base-files/etc/board.d/02_network
 #cp -f ${GITHUB_WORKSPACE}/patch/02_network target/linux/mediatek/filogic/base-files/etc/board.d/02_network
 rm -rf target/linux/mediatek/filogic/base-files/lib/upgrade/platform.sh

@@ -44,7 +44,8 @@ echo "========================="
 sed -i 's/root:::0:99999:7:::/root:$1$SOP5eWTA$fJV8ty3QohO0chErhlxCm1:18775:0:99999:7:::/g' package/base-files/files/etc/shadow
 
 ##修改wan口灯
-#sed -i 's/13 GPIO_ACTIVE_LOW/13 GPIO_ACTIVE_HIGH/g' target/linux/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts
+rm -rf target/linux/mediatek/filogic/base-files/etc/board.d/01_leds
+cp -f ${GITHUB_WORKSPACE}/patch/01_leds target/linux/mediatek/filogic/base-files/etc/board.d/01_leds
 
 ## 修改target.mk
 sed -i 's/dnsmasq/dnsmasq-full/g' include/target.mk

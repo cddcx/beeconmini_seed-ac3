@@ -41,7 +41,7 @@ echo "开始 DIY1 配置……"
 echo "========================="
 
 ## autocore automount default-settings
-#merge_package master https://github.com/immortalwrt/immortalwrt package/emortal package/emortal/default-settings
+merge_package master https://github.com/immortalwrt/immortalwrt package/emortal package/emortal/default-settings
 
 echo "========================="
 echo " DIY1 配置完成……"

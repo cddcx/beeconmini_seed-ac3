@@ -21,9 +21,9 @@ env:
   REPO_BRANCH: 25.12.5
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
-  DIY_P1_SH: diy1.sh
+  DIY_P1_SH: diy01.sh
   DIY_P2_SH: diy2.sh
-  UPLOAD_BIN_DIR: false
+  UPLOAD_BIN_DIR: false0
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai

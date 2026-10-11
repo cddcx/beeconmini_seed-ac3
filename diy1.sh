@@ -57,6 +57,8 @@ cp -f package/ac3/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts target/linux/medi
 merge_package 25.12.5 https://github.com/BeeconMini/openwrt package/kernel package/kernel/rtl8373n-ac3
 rm -rf package/ac3
 
+merge_package 25.12.2 https://github.com/BeeconMini/openwrt package/kernel/rtl8373n-ac3 package/kernel/rtl8373n-ac3/src
+
 ## autocore automount default-settings
 merge_package master https://github.com/immortalwrt/immortalwrt package/emortal package/emortal/default-settings
 

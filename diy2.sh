@@ -45,7 +45,7 @@ sed -i 's/root:::0:99999:7:::/root:$1$SOP5eWTA$fJV8ty3QohO0chErhlxCm1:18775:0:99
 
 ##修改lan口
 #sed -i 's#0x0 0x20 0x07#0x0 0x07 0x20#g' target/linux/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts
-#sed -i 's#realtek,rtl8373n#realtek,rtl8373n-ac3#g' target/linux/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts
+sed -i 's#realtek,rtl8373n#realtek,kmod-switch-rtl8373n-ac3#g' target/linux/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts
 #sed -i 's#pio 10 GPIO_ACTIVE_HIGH#pio 10 GPIO_ACTIVE_LOW#g' target/linux/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts
 sed -i 's#reset-deassert-us = <100000>#reset-deassert-us = <200000>#g' target/linux/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts
 

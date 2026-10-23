@@ -55,6 +55,28 @@ sed -i "s/kmod-nft-offload/kmod-nft-offload kmod-nft-tproxy/" include/target.mk
 #sed -i "s/odhcp6c/ipv6-helper/" include/target.mk
 sed -i "s/DEFAULT_PACKAGES.router:=/DEFAULT_PACKAGES.router:=default-settings-chn luci-app-firewall /" include/target.mk
 
+## 删除软件
+#rm -rf feeds/luci/applications/luci-app-adguardhome
+#rm -rf feeds/packages/net/adguardhome
+#rm -rf feeds/luci/themes/luci-theme-bootstrap
+rm -rf feeds/luci/applications/luci-app-alist
+rm -rf feeds/packages/net/alist
+rm -rf feeds/luci/applications/{luci-app-adguardhome,luci-app-v2raya,luci-app-shadowsocks-libev}
+rm -rf feeds/packages/net/{adguardhome,v2raya,shadowsocks-libev}
+
+echo '# 启用 eBPF 支持
+CONFIG_DEVEL=y
+CONFIG_KERNEL_DEBUG_INFO=y
+CONFIG_KERNEL_DEBUG_INFO_REDUCED=n
+CONFIG_KERNEL_DEBUG_INFO_BTF=y
+CONFIG_KERNEL_CGROUPS=y
+CONFIG_KERNEL_CGROUP_BPF=y
+CONFIG_KERNEL_BPF_EVENTS=y
+CONFIG_BPF_TOOLCHAIN_HOST=y
+CONFIG_KERNEL_XDP_SOCKETS=y
+CONFIG_PACKAGE_kmod-xdp-sockets-diag=y
+' >>  ./.config
+
 ./scripts/feeds install -a
 
 echo "========================="

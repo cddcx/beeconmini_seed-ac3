@@ -45,6 +45,7 @@ merge_package master https://github.com/immortalwrt/immortalwrt package/emortal 
 
 ## luci-app-daede
 merge_package main https://github.com/kenzok8/openwrt-daede package/openwrt-daede dae daed vmlinux-btf luci-app-daede
+merge_package v5 https://github.com/sbwml/openwrt_helloworld package/openwrt-daede v2ray-geodata
 
 echo "========================="
 echo " DIY1 配置完成……"

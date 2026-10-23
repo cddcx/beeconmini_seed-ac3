@@ -40,6 +40,9 @@ merge_feed(){
 echo "开始 DIY1 配置……"
 echo "========================="
 
+## luci-app-nikki
+echo "src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git;main" >> "feeds.conf.default"
+
 ## autocore automount default-settings
 merge_package master https://github.com/immortalwrt/immortalwrt package/emortal package/emortal/default-settings
 

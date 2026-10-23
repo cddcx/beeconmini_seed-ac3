@@ -56,13 +56,8 @@ sed -i "s/kmod-nft-offload/kmod-nft-offload kmod-nft-tproxy/" include/target.mk
 sed -i "s/DEFAULT_PACKAGES.router:=/DEFAULT_PACKAGES.router:=default-settings-chn luci-app-firewall /" include/target.mk
 
 ## 删除软件
-#rm -rf feeds/luci/applications/luci-app-adguardhome
-#rm -rf feeds/packages/net/adguardhome
-#rm -rf feeds/luci/themes/luci-theme-bootstrap
-rm -rf feeds/luci/applications/luci-app-alist
-rm -rf feeds/packages/net/alist
-rm -rf feeds/luci/applications/{luci-app-adguardhome,luci-app-v2raya,luci-app-shadowsocks-libev}
-rm -rf feeds/packages/net/{adguardhome,v2raya,shadowsocks-libev}
+rm -rf feeds/luci/applications/{luci-app-adguardhome,luci-app-v2raya}
+rm -rf feeds/packages/net/{adguardhome,v2ray*}
 
 echo '# 启用 eBPF 支持
 CONFIG_DEVEL=y

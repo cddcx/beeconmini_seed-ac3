@@ -65,7 +65,7 @@ rm -rf package/ac3
 merge_package master https://github.com/immortalwrt/immortalwrt package/emortal package/emortal/default-settings
 
 ## luci-app-daede
-merge_package main https://github.com/kenzok8/openwrt-daede package/openwrt-daede dae daed vmlinux-btf luci-app-daede
+#merge_package main https://github.com/kenzok8/openwrt-daede package/openwrt-daede dae daed vmlinux-btf luci-app-daede
 
 echo "========================="
 echo " DIY1 配置完成……"

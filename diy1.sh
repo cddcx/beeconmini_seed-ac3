@@ -64,8 +64,8 @@ rm -rf package/ac3
 ## autocore automount default-settings
 merge_package master https://github.com/immortalwrt/immortalwrt package/emortal package/emortal/default-settings
 
-## luci-app-daede
-#merge_package main https://github.com/kenzok8/openwrt-daede package/openwrt-daede dae daed vmlinux-btf luci-app-daede
+## luci-app-dae
+merge_package v5 https://github.com/sbwml/openwrt_helloworld package/dae luci-app-dae dae v2ray-geodata vmlinux-btf
 
 echo "========================="
 echo " DIY1 配置完成……"

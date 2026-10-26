@@ -46,9 +46,8 @@ echo "src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git;main" >>
 ## autocore automount default-settings
 merge_package master https://github.com/immortalwrt/immortalwrt package/emortal package/emortal/default-settings
 
-## luci-app-daede
-merge_package main https://github.com/kenzok8/openwrt-daede package/openwrt-daede dae daed vmlinux-btf luci-app-daede
-merge_package v5 https://github.com/sbwml/openwrt_helloworld package/openwrt-daede v2ray-geodata
+## luci-app-dae
+merge_package v5 https://github.com/sbwml/openwrt_helloworld package/dae luci-app-dae dae v2ray-geodata vmlinux-btf
 
 echo "========================="
 echo " DIY1 配置完成……"

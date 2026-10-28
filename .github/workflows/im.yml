@@ -17,8 +17,8 @@ on:
   workflow_dispatch:
 
 env:
-  REPO_URL: https://github.com/BeeconMini/openwrt
-  REPO_BRANCH: 25.12.5
+  REPO_URL: https://github.com/BeeconMini/immortalwrt
+  REPO_BRANCH: 25.12.1
   FEEDS_CONF: feeds.conf.default
   FILES: files0
   CONFIG_FILE: configs/dae0.config

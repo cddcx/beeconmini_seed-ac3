@@ -21,7 +21,7 @@ env:
   REPO_BRANCH: 25.12.5
   FEEDS_CONF: feeds.conf.default
   FILES: files0
-  CONFIG_FILE: configs/.config
+  CONFIG_FILE: configs/dae0.config
   DIY_P1_SH: diy01.sh
   DIY_P2_SH: diy02.sh
   UPLOAD_BIN_DIR: false

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## dts
-sed -i 's#realtek,rtl8373n#realtek,rtl8373n-ac3#g' target/linux/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts
+sed -i 's#rtl8373n#rtl8373n-ac3#g' target/linux/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts
 
 echo '# 启用 eBPF 支持
 CONFIG_DEVEL=y

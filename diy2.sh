@@ -45,9 +45,9 @@ sed -i 's/root:::0:99999:7:::/root:$1$SOP5eWTA$fJV8ty3QohO0chErhlxCm1:18775:0:99
 
 ##修改lan口
 #sed -i 's#0x0 0x20 0x07#0x07 0x20 0x0#g' target/linux/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts
-sed -i 's#realtek,rtl8373n#realtek,rtl8373n-ac3#g' target/linux/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts
+#sed -i 's#realtek,rtl8373n#realtek,rtl8373n-ac3#g' target/linux/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts
 #sed -i 's#pio 10 GPIO_ACTIVE_HIGH#pio 10 GPIO_ACTIVE_LOW#g' target/linux/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts
-sed -i 's#reset-deassert-us = <100000>#reset-deassert-us = <200000>#g' target/linux/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts
+#sed -i 's#reset-deassert-us = <100000>#reset-deassert-us = <200000>#g' target/linux/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts
 
 ## 修改target.mk
 sed -i 's/dnsmasq/dnsmasq-full/g' include/target.mk
@@ -63,6 +63,23 @@ rm -rf feeds/luci/applications/luci-app-alist
 rm -rf feeds/packages/net/alist
 rm -rf feeds/luci/applications/{luci-app-adguardhome,luci-app-v2raya,luci-app-shadowsocks-libev}
 rm -rf feeds/packages/net/{adguardhome,v2raya,shadowsocks-libev}
+
+# ac3
+echo '# 启用 eBPF 支持
+CONFIG_DEVEL=y
+CONFIG_BPF_TOOLCHAIN_HOST=y
+# CONFIG_BPF_TOOLCHAIN_NONE is not set
+CONFIG_KERNEL_BPF_EVENTS=y
+CONFIG_KERNEL_CGROUP_BPF=y
+CONFIG_KERNEL_DEBUG_INFO=y
+CONFIG_KERNEL_DEBUG_INFO_BTF=y
+# CONFIG_KERNEL_DEBUG_INFO_REDUCED is not set
+CONFIG_KERNEL_XDP_SOCKETS=y
+# 原生 UDP 接收追踪
+CONFIG_KERNEL_FTRACE=y
+CONFIG_KERNEL_FUNCTION_TRACER=y
+CONFIG_KERNEL_DYNAMIC_FTRACE=y
+' >>  ./.config
 
 ./scripts/feeds install -a
 

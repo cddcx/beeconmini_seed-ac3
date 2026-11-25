@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## dts
-sed -i 's#rtl8373n#rtl8373n-ac3#g' target/linux/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts
+#sed -i 's#rtl8373n#rtl8373n-ac3#g' target/linux/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts
 
 echo '# 启用 eBPF 支持
 CONFIG_DEVEL=y
@@ -13,4 +13,8 @@ CONFIG_KERNEL_DEBUG_INFO=y
 CONFIG_KERNEL_DEBUG_INFO_BTF=y
 # CONFIG_KERNEL_DEBUG_INFO_REDUCED is not set
 CONFIG_KERNEL_XDP_SOCKETS=y
+# 原生 UDP 接收追踪
+CONFIG_KERNEL_FTRACE=y
+CONFIG_KERNEL_FUNCTION_TRACER=y
+CONFIG_KERNEL_DYNAMIC_FTRACE=y
 #' >>  ./.config

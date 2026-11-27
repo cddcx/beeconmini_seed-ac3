@@ -40,6 +40,9 @@ merge_feed(){
 echo "开始 DIY1 配置……"
 echo "========================="
 
+## luci-app-nikki
+echo "src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git;main" >> "feeds.conf.default"
+
 ##原版op添加ac3支持
 #cp -f ${GITHUB_WORKSPACE}/patch/Makefile package/kernel/rtl8373n-ac3/Makefile
 #cp -f ${GITHUB_WORKSPACE}/patch/mt7986a-beeconmini-seed-ac3.dts target/linux/mediatek/dts/mt7986a-beeconmini-seed-ac3.dts
